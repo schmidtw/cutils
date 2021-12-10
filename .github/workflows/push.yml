@@ -19,7 +19,7 @@ on:
 
 jobs:
   test:
-    uses: schmidtw/workflow-test/.github/workflows/meson-unit-test.yml@v1
+    uses: schmidtw/workflow-test/.github/workflows/meson-unit-test.yml@main
     secrets:
       sonar_login: "invalid"
       github_token: ${{ secrets.GITHUB_TOKEN }}
