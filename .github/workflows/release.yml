@@ -16,20 +16,22 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - uses: xmidt-org/release-builder-action@v2
+    - name: Create Release Bundle
+      id: bundle
+      uses: xmidt-org/release-builder-action@v2
       with:
         gh-token: ${{ secrets.GITHUB_TOKEN }}
-        provides: cutils
+        meson-provides: cutils
 
     - name: create release
       id: create_release
       uses: ncipollo/release-action@v1
       with:
-        name: ${{ steps.prep.outputs.release-name }}
+        name: ${{ steps.bundle.outputs.release-name }}
         draft: false
         prerelease: false
-        bodyFile: ${{ steps.prep.outputs.body }}
-        artifacts: "${{ steps.prep.outputs.artifact-dir}}/*"
+        bodyFile: ${{ steps.bundle.outputs.body }}
+        artifacts: "${{ steps.bundle.outputs.artifact-dir}}/*"
         token: ${{ secrets.GITHUB_TOKEN }}
 #
 #    uses: schmidtw/workflow-test/.github/workflows/meson-release.yml@main
