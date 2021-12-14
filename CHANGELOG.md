@@ -13,7 +13,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [v2.1.3]
 - Wes
 
-
 ## [v2.1.1]
 - Fix a number of compiler warnings.
 - Improve the test code to accept the abort() as a successful test.
