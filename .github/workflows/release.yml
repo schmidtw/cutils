@@ -26,11 +26,11 @@ jobs:
     - name: Upload Release
       uses: ncipollo/release-action@v1
       with:
-        name: ${{ steps.bundle.outputs.release-name }}
-        tag: ${{ steps.bundle.outputs.release-tag }}
+        tag: "${{ steps.bundle.outputs.release-tag }}"
+        name: "${{ steps.bundle.outputs.release-name }}"
         draft: false
         prerelease: false
-        bodyFile: ${{ steps.bundle.outputs.body }}
+        bodyFile: "${{ steps.bundle.outputs.release-body }}"
         artifacts: "${{ steps.bundle.outputs.artifact-dir}}/*"
         token: ${{ secrets.GITHUB_TOKEN }}
 #
