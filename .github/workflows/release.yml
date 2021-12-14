@@ -27,10 +27,10 @@ jobs:
       uses: ncipollo/release-action@v1
       with:
         name: ${{ steps.bundle.outputs.release-name }}
-        tag: "Wes ${{ steps.bundle.outputs.rtag }}"
+        tag: ${{ steps.bundle.outputs.release-tag }}
         draft: false
         prerelease: false
-        body: "${{ steps.bundle.outputs.release-body }}"
+        body: ${{ steps.bundle.outputs.release-body }}
         artifacts: "${{ steps.bundle.outputs.artifact-dir }}/*"
         token: ${{ secrets.GITHUB_TOKEN }}
 #
