@@ -14,3 +14,5 @@ jobs:
     uses: schmidtw/workflow-test/.github/workflows/meson-release.yml@main
     secrets:
       github_token: ${{ secrets.GITHUB_TOKEN }}
+      github_repository: ${{ github.repository }}
+      github_workspace: ${{ github.workspace }}
