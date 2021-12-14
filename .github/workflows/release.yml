@@ -14,6 +14,7 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v2
     - uses: xmidt-org/release-builder-action@v2
       with:
         gh-token: ${{ secrets.GITHUB_TOKEN }}
