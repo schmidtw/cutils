@@ -26,8 +26,8 @@ jobs:
     - name: Upload Release
       uses: ncipollo/release-action@v1
       with:
-        name: ${{ steps.bundle.outputs.tag }}
-        tag: ${{ steps.bundle.outputs.release-name }}
+        name: ${{ steps.bundle.outputs.release-name }}
+        tag: "Wes ${{ steps.bundle.outputs.tag }}"
         draft: false
         prerelease: false
         body: "${{ steps.bundle.outputs.release-body }}"
