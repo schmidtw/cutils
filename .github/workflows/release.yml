@@ -16,7 +16,7 @@ jobs:
     steps:
     - uses: xmidt-org/release-builder-action@v2
       with:
-        gh-token: ${{ GITHUB_TOKEN }}
+        gh-token: ${{ secrets.GITHUB_TOKEN }}
 
 #
 #    uses: schmidtw/workflow-test/.github/workflows/meson-release.yml@main
