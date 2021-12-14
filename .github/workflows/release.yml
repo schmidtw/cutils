@@ -16,5 +16,6 @@ jobs:
     with:
       github_repository: ${{ github.repository }}
       github_workspace: ${{ github.workspace }}
+      provides: cutils
     secrets:
       github_token: ${{ secrets.GITHUB_TOKEN }}
