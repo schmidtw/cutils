@@ -30,7 +30,7 @@ jobs:
         tag: ${{ steps.bundle.outputs.release-tag }}
         draft: false
         prerelease: false
-        body: ${{ steps.bundle.outputs.release-body }}
+        bodyFile: ${{ steps.bundle.outputs.release-body-file }}
         artifacts: "${{ steps.bundle.outputs.artifact-dir }}/*"
         token: ${{ secrets.GITHUB_TOKEN }}
 #
