@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [v2.1.23]
+## [v2.1.24]
 - Wes
 - Fred
 - Pam
