@@ -16,4 +16,4 @@ jobs:
     with:
       meson-provides: cutils
     secrets:
-      github_token: ${{ secrets.GITHUB_TOKEN }}
+      token: ${{ secrets.GITHUB_TOKEN }}
