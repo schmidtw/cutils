@@ -12,10 +12,15 @@ on:
 
 jobs:
   release:
-    uses: schmidtw/workflow-test/.github/workflows/meson-release.yml@main
+    uses: xmidt-org/release-builder-action@v2
     with:
-      github_repository: ${{ github.repository }}
-      github_workspace: ${{ github.workspace }}
-      provides: cutils
-    secrets:
-      github_token: ${{ secrets.GITHUB_TOKEN }}
+      gh-token: ${{ GITHUB_TOKEN }}
+
+#
+#    uses: schmidtw/workflow-test/.github/workflows/meson-release.yml@main
+#    with:
+#      github_repository: ${{ github.repository }}
+#      github_workspace: ${{ github.workspace }}
+#      provides: cutils
+#    secrets:
+#      github_token: ${{ secrets.GITHUB_TOKEN }}
