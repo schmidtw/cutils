@@ -17,18 +17,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Install packages
-      run: |
-        sudo apt-get -y install python3 python3-pip python3-setuptools python3-wheel
-
-    - name: Install Meson
-      run: |
-        pip3 install --user 'meson>=0.59.0'
-
-
     - uses: xmidt-org/release-builder-action@v2
       with:
         gh-token: ${{ secrets.GITHUB_TOKEN }}
+        provides: cutils
 
 #
 #    uses: schmidtw/workflow-test/.github/workflows/meson-release.yml@main
