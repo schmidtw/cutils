@@ -7,7 +7,6 @@ on:
   push:
     paths:
       - "CHANGELOG.md" # only try to tag if the CHANGELOG has been updated.
-      - "meson.build"
     branches:
       - main
 
@@ -22,6 +21,16 @@ jobs:
         gh-token: ${{ secrets.GITHUB_TOKEN }}
         provides: cutils
 
+    - name: create release
+      id: create_release
+      uses: ncipollo/release-action@v1
+      with:
+        name: ${{ steps.prep.outputs.release-name }}
+        draft: false
+        prerelease: false
+        bodyFile: ${{ steps.prep.outputs.body }}
+        artifacts: "${{ steps.prep.outputs.artifact-dir}}/*"
+        token: ${{ secrets.GITHUB_TOKEN }}
 #
 #    uses: schmidtw/workflow-test/.github/workflows/meson-release.yml@main
 #    with:
