@@ -12,9 +12,11 @@ on:
 
 jobs:
   release:
-    uses: xmidt-org/release-builder-action@v2
-    with:
-      gh-token: ${{ GITHUB_TOKEN }}
+    runs-on: ubuntu-latest
+    steps:
+    - uses: xmidt-org/release-builder-action@v2
+      with:
+        gh-token: ${{ GITHUB_TOKEN }}
 
 #
 #    uses: schmidtw/workflow-test/.github/workflows/meson-release.yml@main
