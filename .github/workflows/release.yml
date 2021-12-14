@@ -27,7 +27,7 @@ jobs:
       uses: ncipollo/release-action@v1
       with:
         tag: "${{ steps.bundle.outputs.release-tag }}"
-        name: "${{ steps.bundle.outputs.release-name }}"
+        name: "${{ steps.bundle.outputs.release-tag }}"
         draft: false
         prerelease: false
         bodyFile: "${{ steps.bundle.outputs.release-body }}"
