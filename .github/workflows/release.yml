@@ -5,14 +5,16 @@ name: release
 
 on:
   push:
-    tags:
-      # Push events to matching v#.#.#*, ex: v1.2.3, v.2.4.6-beta
-      - 'v[0-9]+.[0-9]+.[0-9]+*'
+    paths:
+      - "CHANGELOG.md" # only try to tag if the CHANGELOG has been updated.
+    branches:
+      - main
 
 jobs:
   release:
     uses: schmidtw/workflow-test/.github/workflows/meson-release.yml@main
-    secrets:
-      github_token: ${{ secrets.GITHUB_TOKEN }}
+    with:
       github_repository: ${{ github.repository }}
       github_workspace: ${{ github.workspace }}
+    secrets:
+      github_token: ${{ secrets.GITHUB_TOKEN }}
