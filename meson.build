@@ -9,6 +9,7 @@ project('cutils', 'c',
         default_options: ['c_std=c99',
                           'b_coverage=true'])
 
+
 if not meson.is_subproject()
   # We want strict flags
   warning_level = 3   # -Wall

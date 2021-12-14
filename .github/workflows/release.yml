@@ -7,6 +7,7 @@ on:
   push:
     paths:
       - "CHANGELOG.md" # only try to tag if the CHANGELOG has been updated.
+      - "meson.build"
     branches:
       - main
 
