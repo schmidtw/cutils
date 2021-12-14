@@ -23,8 +23,7 @@ jobs:
         gh-token: ${{ secrets.GITHUB_TOKEN }}
         meson-provides: cutils
 
-    - name: create release
-      id: create_release
+    - name: Upload Release
       uses: ncipollo/release-action@v1
       with:
         name: ${{ steps.bundle.outputs.release-name }}
