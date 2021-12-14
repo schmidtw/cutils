@@ -30,8 +30,8 @@ jobs:
         name: "${{ steps.bundle.outputs.release-tag }}"
         draft: false
         prerelease: false
-        bodyFile: "${{ steps.bundle.outputs.release-body }}"
-        artifacts: "${{ steps.bundle.outputs.artifact-dir}}/*"
+        body: "${{ steps.bundle.outputs.release-body }}"
+        artifacts: "${{ steps.bundle.outputs.artifact-dir }}/*"
         token: ${{ secrets.GITHUB_TOKEN }}
 #
 #    uses: schmidtw/workflow-test/.github/workflows/meson-release.yml@main
