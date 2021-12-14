@@ -26,8 +26,7 @@ jobs:
     - name: Upload Release
       uses: ncipollo/release-action@v1
       with:
-        #tag: v"${{ steps.bundle.outputs.release-tag }}"
-        tag: "v2.1.11"
+        tag: "${{ steps.bundle.outputs.release-tag }}"
         name: "${{ steps.bundle.outputs.release-name }}"
         draft: false
         prerelease: false
