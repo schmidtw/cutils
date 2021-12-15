@@ -13,7 +13,5 @@ on:
 jobs:
   release:
     uses: schmidtw/workflow-test/.github/workflows/meson-release.yml@main
-    with:
-      meson-provides: cutils
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
