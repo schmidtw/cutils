@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [v2.1.35]
+## [v2.1.36]
 ### Added
 - Wes
 - Fred
