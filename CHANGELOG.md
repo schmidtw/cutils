@@ -10,7 +10,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [v2.1.34]
+## [v2.1.35]
+### Added
 - Wes
 - Fred
 - Pam
