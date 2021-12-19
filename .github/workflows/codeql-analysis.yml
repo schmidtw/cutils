@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: 2021 Comcast Cable Communications Management, LLC
+# SPDX-License-Identifier: Apache-2.0
+
+name: LGTM Analysis
+
+on:
+  create:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '12 9 * * 3'
+
+jobs:
+  codeql:
+    uses: schmidtw/workflow-test/.github/workflows/codeql-c-analysis.yml@main
