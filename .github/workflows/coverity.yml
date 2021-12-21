@@ -20,9 +20,9 @@ jobs:
   test:
     uses: schmidtw/workflow-test/.github/workflows/meson-coverity.yml@main
     with:
-      github_repository: $GITHUB_REPOSITORY
+      repo: $GITHUB_REPOSITORY
       library: cutils
-      github_sha: $GITHUB_SHA
+      sha: $GITHUB_SHA
     secrets:
       coverity_key: ${{ secrets.COVERITY_KEY }}
       token: ${{ secrets.GITHUB_TOKEN }}
