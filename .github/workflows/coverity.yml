@@ -18,7 +18,7 @@ on:
 
 jobs:
   test:
-    uses: schmidtw/workflow-test/.github/workflows/meson-unit-test.yml@main
+    uses: schmidtw/workflow-test/.github/workflows/meson-coverity.yml@main
     with:
       github_repository: $GITHUB_REPOSITORY
       library: cutils
