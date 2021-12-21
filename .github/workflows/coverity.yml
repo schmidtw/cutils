@@ -23,5 +23,5 @@ jobs:
       repo: $GITHUB_REPOSITORY
       sha: $GITHUB_SHA
     secrets:
-      coverity_key: ${{ secrets.COVERITY_KEY }}
+      coverity_key: invalid #${{ secrets.COVERITY_KEY }}
       token: ${{ secrets.GITHUB_TOKEN }}
