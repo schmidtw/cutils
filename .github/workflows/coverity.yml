@@ -19,7 +19,7 @@ on:
 jobs:
   test:
     uses: schmidtw/workflow-test/.github/workflows/meson-unit-test.yml@main
-    inputs:
+    with:
       github_repository: $GITHUB_REPOSITORY
       library: cutils
       github_sha: $GITHUB_SHA
